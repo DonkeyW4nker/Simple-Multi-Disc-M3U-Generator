@@ -1,51 +1,46 @@
 # M3U Generator
 
-A clean, modern desktop tool for building **multi-disc `.m3u` playlists** from ROM disc files. Designed for emulator users who need to bundle multi-CD games (PlayStation, Saturn, Sega CD, Dreamcast, etc.) into single, swappable playlists.
+Build, edit, and bulk-generate `.m3u` playlists for multi-disc games.
 
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/DonkeyW4nker/Simple-Multi-Disc-M3U-Generator/blob/main/LICENSE)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green)
 
----
+A modern Tkinter GUI for stitching multi-CD games (PlayStation, Saturn, Sega CD, Dreamcast, etc.) into single emulator-ready playlists.
+
+## Quick start
+
+**Windows:** Download `M3UGenerator.exe` from the [latest release](../../releases/latest) and run it. No install needed.
+
+**macOS / Linux:** Run from source:
+```bash
+python3 m3u_generator.py
+```
+Requires Python 3.10+. Tkinter is bundled — no extra packages.
+
+## Three modes
+
+**Generate** — pick 2–15 disc files, choose a path mode, and create a fresh playlist.
+
+**Edit** — open any existing `.m3u` file and reorder, add, or remove discs, then save back over it (or to a new path).
+
+**Bulk** — point at a folder of ROMs, get one `.m3u` per detected multi-disc game in a single pass.
 
 ## Features
 
-- **Add 2–15 disc files** with multi-select file picker
-- **Reorder** discs (↑ / ↓ buttons)
-- **Delete** discs
+- Add 2–15 disc files at once, reorder, delete with confirmation
 - **Two path modes**
-  - **Relative paths** — for portable setups where the M3U sits with the ROMs in their existing folder
-  - **Filename only** — auto-creates a `Game.m3u/` subfolder; ideal for RetroArch / DuckStation / BizHawk
-- **Bulk mode** — point at a folder of ROMs and generate one M3U per detected multi-disc set automatically
-- **Format validation** — only allows known emulator-compatible formats; warns on mixed format types or possible filename mismatches
+  - **Relative paths** — keeps your ROMs in their existing folders
+  - **Filename only** — auto-creates a `Game.m3u/` subfolder; standard for RetroArch, DuckStation, BizHawk
+- **Format validation** — only allows known emulator-compatible extensions; warns on mixed format types or filename mismatches
 - **Light / dark theme** toggle
-- **Built-in help page** with format compatibility by console
+- **Hover tooltips** and a built-in help page documenting every action
 
 ## Supported formats
 
 `.cue` `.iso` `.chd` `.ccd` `.pbp` `.gdi` `.cdi` `.rvz` `.gcz`
 
-See the in-app **?** help page for the full compatibility matrix by console.
-
----
-
-## Running
-
-### Option 1 — Pre-built executable (Windows)
-
-Download `M3UGenerator.exe` from the [latest release](../../releases/latest) and double-click. No Python install required.
-
-### Option 2 — From source
-
-Requires **Python 3.10+** (Tkinter is bundled with Python; no extra packages needed).
-
-```bash
-# Windows
-python m3u_generator.py
-
-# macOS / Linux
-python3 m3u_generator.py
-```
-
----
+The in-app **?** help page shows the full compatibility matrix by console.
 
 ## Building the executable yourself
 
@@ -62,7 +57,9 @@ The project ships with a one-click build script that produces a single, self-con
 
 The script will:
 - Auto-install PyInstaller if not present
-- Build a single-file windowed `.exe`
+- Build a single-file windowed `.exe` (no console window)
+- Embed `m3u_icon.ico` as the file-manager icon
+- Bundle the icon as a runtime resource (so the title bar and taskbar show it too)
 
 ### Manual build (any OS)
 
@@ -70,23 +67,20 @@ If you'd rather invoke PyInstaller directly:
 
 ```bash
 pip install pyinstaller
-pyinstaller --noconfirm --clean m3u_generator.spec
+pyinstaller --onefile --windowed --icon m3u_icon.ico --add-data "m3u_icon.ico;." m3u_generator.py
 ```
 
 Output appears in `dist/`.
-
----
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `m3u_generator.py`   | Main application |
-| `m3u_icon.ico`       | Window, taskbar, and file-manager icon |
-| `build.bat`          | One-click Windows build script |
-| `m3u_generator.spec` | PyInstaller build configuration |
-| `README.md`          | This file |
-| `LICENSE`            | MIT |
+| `m3u_generator.py` | Main application |
+| `m3u_icon.ico`     | Window, taskbar, and file-manager icon |
+| `build.bat`        | One-click Windows build script |
+| `README.md`        | This file |
+| `LICENSE`          | MIT |
 
 ## License
 
