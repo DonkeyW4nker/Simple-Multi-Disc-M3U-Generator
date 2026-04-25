@@ -10,14 +10,13 @@ A clean, modern desktop tool for building **multi-disc `.m3u` playlists** from R
 
 - **Add 2–15 disc files** with multi-select file picker
 - **Reorder** discs (↑ / ↓ buttons)
-- **Delete** discs with optional confirmation dialog and "don't ask again"
+- **Delete** discs
 - **Two path modes**
   - **Relative paths** — for portable setups where the M3U sits with the ROMs in their existing folder
   - **Filename only** — auto-creates a `Game.m3u/` subfolder; ideal for RetroArch / DuckStation / BizHawk
 - **Bulk mode** — point at a folder of ROMs and generate one M3U per detected multi-disc set automatically
-- **Format validation** — only allows known emulator-compatible formats; warns on mixed format types or possible filename mismatches (e.g. accidentally mixing different games)
+- **Format validation** — only allows known emulator-compatible formats; warns on mixed format types or possible filename mismatches
 - **Light / dark theme** toggle
-- **Hover tooltips** on every action button explaining what it does
 - **Built-in help page** with format compatibility by console
 
 ## Supported formats
@@ -63,9 +62,7 @@ The project ships with a one-click build script that produces a single, self-con
 
 The script will:
 - Auto-install PyInstaller if not present
-- Build a single-file windowed `.exe` (no console window)
-- Embed `m3u_icon.ico` as the file-manager icon
-- Bundle the icon as a runtime resource (so the title bar and taskbar show it too)
+- Build a single-file windowed `.exe`
 
 ### Manual build (any OS)
 
