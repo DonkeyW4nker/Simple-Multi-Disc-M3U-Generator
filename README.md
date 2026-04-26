@@ -2,9 +2,7 @@
 
 Build, edit, and bulk-generate `.m3u` playlists for multi-disc games.
 
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/DonkeyW4nker/Simple-Multi-Disc-M3U-Generator/blob/main/LICENSE)
 
 A modern Tkinter GUI for stitching multi-CD games (PlayStation, Saturn, Sega CD, Dreamcast, etc.) into single emulator-ready playlists.
 
