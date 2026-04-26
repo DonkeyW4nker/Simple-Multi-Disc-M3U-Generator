@@ -1,4 +1,5 @@
 # Simple Multi Disc M3U Generator
+For use with roms only 
 
 Build, edit, and bulk-generate `.m3u` playlists for multi-disc games.
 
