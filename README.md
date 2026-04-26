@@ -1,4 +1,4 @@
-# M3U Generator
+# Simple Multi Disc M3U Generator
 
 Build, edit, and bulk-generate `.m3u` playlists for multi-disc games.
 
