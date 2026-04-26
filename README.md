@@ -5,7 +5,7 @@ Build, edit, and bulk-generate `.m3u` playlists for multi-disc games.
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/DonkeyW4nker/Simple-Multi-Disc-M3U-Generator/blob/main/LICENSE)
 [![Release](https://img.shields.io/badge/Release-1.0.0-blue)](https://github.com/DonkeyW4nker/Simple-Multi-Disc-M3U-Generator/releases)
 
-A modern Tkinter GUI for stitching multi-CD games (PlayStation, Saturn, Sega CD, Dreamcast, etc.) into single emulator-ready playlists.
+A modern GUI for stitching multi-CD games (PlayStation, Saturn, Sega CD, Dreamcast, etc.) into single emulator-ready playlists.
 
 ## Quick start
 
