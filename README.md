@@ -31,7 +31,7 @@ Requires Python 3.10+. Tkinter is bundled — no extra packages.
 - **Two path modes**
   - **Relative paths** — keeps your ROMs in their existing folders
   - **Filename only** — auto-creates a `Game.m3u/` subfolder; standard for RetroArch, DuckStation, BizHawk
-- **Format validation** — only allows known emulator-compatible extensions; warns on mixed format types or filename mismatches
+- **Format validation** — only allows known emulator-compatible extensions
 - **Light / dark theme** toggle
 - **Hover tooltips** and a built-in help page documenting every action
 
